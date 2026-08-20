@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Bell, TrendingUp, DollarSign, Users, ArrowUpRight } from 'lucide-react';
+import { Search, Bell, TrendingUp, Users, ArrowUpRight } from 'lucide-react';
 import './ProductPreview.css';
 
 export default function ProductPreview() {
@@ -67,8 +67,7 @@ export default function ProductPreview() {
               {/* Main Content Area */}
               <div className="mockup-content">
                 {/* Stats Row */}
-              
-
+                <div className="mockup-stats-row">
                   <div className="stat-card">
                     <div className="stat-card-header">
                       <span className="stat-lbl">Active Instances</span>
