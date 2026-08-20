@@ -57,12 +57,14 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1 variants={itemVariants}>
-            Something Amazing <br />
-            <span className="grad-text">Is Coming.</span>
+            Beyond the<br />
+            <span className="grad-text"> Next Generation.</span>
           </motion.h1>
 
           <motion.p className="hero-lead" variants={itemVariants}>
-            We're building Corentix, a next-generation platform navigated by intelligence. A completely redesigned digital experience is on the way.
+            We are engineering Corentix: an intelligent ecosystem built to anticipate your every move. The digital experience isn't just getting an upgrade. It's evolving.
+
+The evolution begins shortly.
           </motion.p>
 
           <motion.div className="hero-actions" variants={itemVariants}>
