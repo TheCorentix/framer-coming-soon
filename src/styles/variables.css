@@ -1,0 +1,37 @@
+:root {
+  --bg: #05060B;
+  --bg-elevated: #0B0E1B;
+  --bg-card: #10132399;
+  --line: #ffffff14;
+  --line-strong: #ffffff26;
+  --text: #E9EAF4;
+  --text-dim: #9CA0B8;
+  --text-faint: #6A6E86;
+  
+  /* Orange Accent colors */
+  --cyan: #FF5A1E;
+  --cyan-2: #FF8A50;
+  --cyan-deep: #C2410C;
+  --violet: #FF5A1E;
+  --violet-dim: #FF5A1E22;
+  --gold: #E8B75C;
+  --danger: #FF6B6B;
+
+  /* Typography Families */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-serif-italic: 'Fraunces', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --max-w: 100%;
+  --edge: clamp(24px, 7vw, 96px);
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Responsive typography scaling helper */
+  --font-size-hero: clamp(2.4rem, 7.5vw, 5.2rem);
+  --font-size-h2: clamp(1.8rem, 4.5vw, 2.8rem);
+  --font-size-h3: clamp(1.3rem, 2.5vw, 1.8rem);
+  --font-size-body: clamp(0.95rem, 1.4vw, 1.05rem);
+}

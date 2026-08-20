@@ -1,0 +1,211 @@
+.launch-timeline {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.timeline-connector-line {
+  position: absolute;
+  top: 22px;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background-color: var(--line);
+  z-index: 1;
+}
+
+.connector-line-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan) 0%, var(--cyan-2) 100%);
+  border-radius: 99px;
+  box-shadow: 0 0 10px var(--cyan);
+}
+
+.timeline-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Step Bubbles */
+.step-bubble-wrapper {
+  position: relative;
+  margin-bottom: 24px;
+  z-index: 3;
+}
+
+.step-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: var(--transition-smooth);
+}
+
+.completed .step-bubble {
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-2) 100%);
+  color: #05060B;
+  box-shadow: 0 0 20px rgba(255, 90, 30, 0.35);
+}
+
+.step-icon-complete {
+  stroke-width: 3px;
+}
+
+.active .step-bubble {
+  background-color: var(--bg-elevated);
+  border: 2px solid var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 16px rgba(255, 90, 30, 0.18);
+}
+
+.step-icon-active {
+  animation: flame-pulse-orange 1.5s infinite alternate ease-in-out;
+}
+
+.upcoming .step-bubble {
+  background-color: var(--bg-elevated);
+  border: 2px solid var(--line-strong);
+  color: var(--text-faint);
+}
+
+.step-number {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+/* Active Glow Ring */
+.active-pulse-ring {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(255, 90, 30, 0.3);
+  border-radius: 50%;
+  animation: pulse-ring-orange 2s infinite ease-out;
+  pointer-events: none;
+}
+
+/* Timeline Cards */
+.step-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px 24px;
+  width: 100%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.step-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+}
+
+.completed .step-badge {
+  background-color: rgba(16, 185, 129, 0.08);
+  color: #10B981;
+}
+
+.active .step-badge {
+  background-color: rgba(255, 90, 30, 0.08);
+  color: var(--cyan-2);
+}
+
+.upcoming .step-badge {
+  background-color: rgba(255, 255, 255, 0.02);
+  color: var(--text-faint);
+}
+
+.step-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+}
+
+.step-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.active .step-card {
+  border-color: rgba(255, 90, 30, 0.25);
+  box-shadow: 0 10px 30px rgba(255, 90, 30, 0.03);
+}
+
+/* Animations */
+@keyframes pulse-ring-orange {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes flame-pulse-orange {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+  .timeline-connector-line {
+    display: none;
+  }
+  
+  .timeline-items {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .step-bubble-wrapper {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+  
+  .step-card {
+    text-align: left;
+  }
+}
