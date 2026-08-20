@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 import logo from '../assets/logo.jpeg';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,41 +26,11 @@ export default function Navbar() {
           </span>
           <span className="brand-name">Corentix <span className="brand-labs"></span></span>
         </a>
-        
-
 
         <div className="header-cta">
           <button className="btn btn-ghost">The evolution is under construction</button>
         </div>
-
-        <button 
-          className={`menu-btn ${isOpen ? 'is-open' : ''}`}
-          onClick={() => setIsOpen(!isOpen)} 
-          aria-label="Toggle menu"
-          aria-expanded={isOpen}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="mobile-nav"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <a href="#product" onClick={() => setIsOpen(false)}>Product</a>
-            <a href="#features" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
-            <button className="btn btn-primary" onClick={() => setIsOpen(false)}>The evolution is under construction</button>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </header>
   );
 }
