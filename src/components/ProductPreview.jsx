@@ -4,12 +4,6 @@ import { Search, Bell, TrendingUp, Users, ArrowUpRight } from 'lucide-react';
 import './ProductPreview.css';
 
 export default function ProductPreview() {
-  const activities = [
-    { name: "Sarah Connor", action: "Upgraded to Pro Plan", time: "2m ago", amount: "+$89.00" },
-    { name: "Marcus Wright", action: "Integrated API keys", time: "14m ago" },
-    { name: "John Connor", action: "Joined Team Workspace", time: "1h ago" }
-  ];
-
   return (
     <section className="section preview-section" id="product">
       <div className="preview-container wrap">
@@ -81,7 +75,7 @@ export default function ProductPreview() {
                   </div>
                 </div>
 
-                {/* Chart & Live Activity Grid */}
+                {/* Chart Grid */}
                 <div className="mockup-grid">
                   {/* Chart Card */}
                   <div className="grid-card chart-card">
@@ -112,29 +106,6 @@ export default function ProductPreview() {
                         <circle cx="320" cy="40" r="4" fill="var(--cyan-2)" stroke="var(--bg-elevated)" strokeWidth="1.5" />
                         <circle cx="160" cy="65" r="4" fill="var(--cyan-2)" stroke="var(--bg-elevated)" strokeWidth="1.5" />
                       </svg>
-                    </div>
-                  </div>
-
-                  {/* Activity Card */}
-                  <div className="grid-card activity-card">
-                    <div className="card-lbl-row">
-                      <span className="grid-card-title">Realtime events</span>
-                      <span className="live-dot-indicator"><span className="pulse-dot"></span>Live</span>
-                    </div>
-                    
-                    <div className="activity-list">
-                      {activities.map((act, idx) => (
-                        <div key={idx} className="activity-item">
-                          <div className="act-details">
-                            <span className="act-name">{act.name}</span>
-                            <span className="act-action">{act.action}</span>
-                          </div>
-                          <div className="act-meta">
-                            {act.amount && <span className="act-amt text-success">{act.amount}</span>}
-                            <span className="act-time">{act.time}</span>
-                          </div>
-                        </div>
-                      ))}
                     </div>
                   </div>
                 </div>
