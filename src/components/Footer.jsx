@@ -10,7 +10,8 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <span className="brand-logo">Corentix</span>
-            <p className="brand-tagline">Built for what's next.</p>
+            <p className="brand-tagline">Innovate Integrate Elevate.</p>
+            <a href="mailto:hello@corentix.com" className="brand-email">hello@corentix.com</a>
           </div>
         </div>
 
