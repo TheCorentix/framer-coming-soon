@@ -53,7 +53,7 @@ export default function Hero() {
           animate="visible"
         >
           <motion.div className="hero-eyebrow" variants={itemVariants}>
-            COMING SOON
+            On the horizon
           </motion.div>
 
           <motion.h1 variants={itemVariants}>
