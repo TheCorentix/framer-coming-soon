@@ -75,7 +75,7 @@ ul {
 
 .section {
   position: relative;
-  padding: min(14vw, 140px) 0;
+  padding: min(8vw, 80px) 0;
 }
 
 .section-head {
