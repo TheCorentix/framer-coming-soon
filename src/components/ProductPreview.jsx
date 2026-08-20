@@ -69,10 +69,7 @@ export default function ProductPreview() {
                 {/* Stats Row */}
                 <div className="mockup-stats-row">
                   <div className="stat-card">
-                    <div className="stat-card-header">
-                      <span className="stat-lbl">Compute Revenue</span>
-                      <div className="stat-icon-box"><DollarSign size={12} /></div>
-                    </div>
+                    
                     <div className="stat-card-val">$48,259.00</div>
                     <div className="stat-card-trend">
                       <TrendingUp size={12} className="text-success" />
