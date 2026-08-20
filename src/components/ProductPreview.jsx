@@ -67,15 +67,7 @@ export default function ProductPreview() {
               {/* Main Content Area */}
               <div className="mockup-content">
                 {/* Stats Row */}
-                <div className="mockup-stats-row">
-                  <div className="stat-card">
-                    
-                    <div className="stat-card-val">$48,259.00</div>
-                    <div className="stat-card-trend">
-                      <TrendingUp size={12} className="text-success" />
-                      <span>+12.4% vs last month</span>
-                    </div>
-                  </div>
+              
 
                   <div className="stat-card">
                     <div className="stat-card-header">
