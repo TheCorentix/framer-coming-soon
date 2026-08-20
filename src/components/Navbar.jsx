@@ -30,11 +30,7 @@ export default function Navbar() {
           <span className="brand-name">Corentix <span className="brand-labs"></span></span>
         </a>
         
-        <nav className="site-nav">
-          <a href="#product">Product</a>
-          <a href="#features">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+
 
         <div className="header-cta">
           <button className="btn btn-ghost">The evolution is under construction</button>
