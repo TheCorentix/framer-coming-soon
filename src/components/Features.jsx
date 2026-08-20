@@ -79,7 +79,7 @@ export default function Features() {
             Core Capabilities
           </motion.div>
           <motion.h2 variants={textVariants}>
-            Built for what's next.
+            Innovate Integrate Elevate
           </motion.h2>
           <motion.p variants={textVariants}>
             A unified architecture engineered to eliminate bottlenecks. Focus on creation, not optimization.
