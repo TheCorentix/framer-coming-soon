@@ -3,11 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 import logo from '../assets/logo.jpeg';
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -19,7 +17,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
       <div className="site-header-inner wrap">
@@ -29,17 +26,10 @@ export default function Navbar() {
           </span>
           <span className="brand-name">Corentix <span className="brand-labs"></span></span>
         </a>
-        
-        <nav className="site-nav">
-          <a href="#product">Product</a>
-          <a href="#features">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
 
         <div className="header-cta">
           <button className="btn btn-ghost">Launching Soon</button>
         </div>
-
         <button 
           className={`menu-btn ${isOpen ? 'is-open' : ''}`}
           onClick={() => setIsOpen(!isOpen)} 
@@ -51,7 +41,6 @@ export default function Navbar() {
           <span></span>
         </button>
       </div>
-
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -61,9 +50,6 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            <a href="#product" onClick={() => setIsOpen(false)}>Product</a>
-            <a href="#features" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
             <button className="btn btn-primary" onClick={() => setIsOpen(false)}>Launching Soon</button>
           </motion.div>
         )}
