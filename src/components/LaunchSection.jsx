@@ -35,7 +35,7 @@ export default function LaunchSection() {
         {/* Header */}
         <div className="section-head" style={{ margin: '0 auto 64px', textAlign: 'center' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>On the horizon</div>
-          <h2>Launching Soon</h2>
+          <h2>The Evolution Under Construction</h2>
           <p style={{ margin: '16px auto 0' }}>
             Telemetry status indicators for our release cycles. Track active phases as we synchronize nodes for deployment.
           </p>
